@@ -74,12 +74,15 @@ done
 - Read level was computed using the output of MetaPhlAn 
 ```
 - [MetaPhlAn](https://github.com/biobakery/biobakery/wiki/metaphlan4#131-the-metaphlan-taxonomic-profile)
-- [original paper](https://www.sciencedirect.com/science/article/pii/S2211124723004758#sec4)
+- [Original paper](https://www.sciencedirect.com/science/article/pii/S2211124723004758#sec4)
 
+```bash
 - At the genome level/MAG level - the output of coverM was used. Try to use the count data rather than coverage because the coverage data does not allow to compute richness metrices such as observed, ACE and chao1
+- Follow the following steps to get read counts per MAGs 
+```
+[MAG dereplication and mapping](https://www.earthhologenome.org/bioinformatics/dereplication-and-mapping.html)
 
-- Follow these steps to get read counts per MAG [MAG dereplication and mapping](https://www.earthhologenome.org/bioinformatics/dereplication-and-mapping.html)
-
+```bash
 A. Concatenate MAG to create a MAG catalogue
 ls metaG/drep_refine_bins/dereplicated_genomes/AVla*.fa | wc -l
 cat metaG/drep_refine_bins/dereplicated_genomes/AVla*.fa > mag_catalogue.fa.gz
