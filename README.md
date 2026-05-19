@@ -71,16 +71,13 @@ done
 **3.** Alpha and Beta diversity
 ```bash
 # Alpha and beta diversity is computed at two levels - read and genome (MAGs)
-- Read level was computed using the output of MetaPhlAn 
+- Read level was computed using the output of MetaPhlAn
+- At the genome level/MAG level - the output of coverM was used. Try to use the count data rather than coverage because the coverage data does not allow to compute richness metrices such as observed, ACE and chao1
+- Follow the following steps to get read counts per MAGs  (MAG dereplication and mapping)
 ```
 - [MetaPhlAn](https://github.com/biobakery/biobakery/wiki/metaphlan4#131-the-metaphlan-taxonomic-profile)
 - [Original paper](https://www.sciencedirect.com/science/article/pii/S2211124723004758#sec4)
-
-```bash
-- At the genome level/MAG level - the output of coverM was used. Try to use the count data rather than coverage because the coverage data does not allow to compute richness metrices such as observed, ACE and chao1
-- Follow the following steps to get read counts per MAGs 
-```
-[MAG dereplication and mapping](https://www.earthhologenome.org/bioinformatics/dereplication-and-mapping.html)
+- [MAG dereplication and mapping](https://www.earthhologenome.org/bioinformatics/dereplication-and-mapping.html)
 
 ```bash
 A. Concatenate MAG to create a MAG catalogue
