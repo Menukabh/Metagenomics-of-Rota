@@ -72,6 +72,7 @@ done
 ```bash
 # Alpha and beta diversity is computed at two levels - read and genome (MAGs)
 - Read level was computed using the output of MetaPhlAn [MetaPhlAn](https://github.com/biobakery/biobakery/wiki/metaphlan4#131-the-metaphlan-taxonomic-profile)
+
 [original paper](https://www.sciencedirect.com/science/article/pii/S2211124723004758#sec4)
 
 - At the genome level/MAG level - the output of coverM was used. Try to use the count data rather than coverage because the coverage data does not allow to compute richness metrices such as observed, ACE and chao1
