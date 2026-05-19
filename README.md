@@ -1,7 +1,7 @@
 # Metagenomics analysis
 
 ```bash
-# Most of the Metagenomics analysis was done by IDI-GEMS. The steps in their analysis was
+# Most of the Metagenomics analysis was done by IDI-GEMS. The steps in their analyses were:
 - Trimmomatic - Trim primers and bad quality sequences
 - Kraken - Assign reads , MetaPhlAn for high resolution taxonomic profiling
 - MEGAHIT- Assemble genome to contigs
@@ -13,9 +13,8 @@
 - CheckM- completeness and contamination of bins
 - De-replication of bins (dRep 3.4.0) - Remove duplicate bins and select highest quality representative MAG for each unique genome
 - Taxonomy assignment - GTDBtk
-- CoverM - Mapping each sample's read to MAG and produced coverage based abundance table
+- CoverM - Mapping each sample read to MAG and produced coverage based abundance table
 - Resulting coverage was further normalized by sequencing depth per sample (total read count per sample)
-
 # Things to be done
 1. Alpha diversity
 2. Beta diversity
@@ -67,7 +66,7 @@ sample_ID=$(basename "$fasta" _scaffolds.fna)
 sbatch scripts/abricate.sh vfdb "$fasta" results/Abricate/"$sample_ID"
 done
 ```
-**3.** ALpha and Beta diversity
+**3.** Alpha and Beta diversity
 ```bash
 # Alpha and beta diversity is computed at two levels - read and genome (MAGs)
 - Read level was computed using the output of MetaPhlAn [MetaPhlAn](https://github.com/biobakery/biobakery/wiki/metaphlan4#131-the-metaphlan-taxonomic-profile)
@@ -126,4 +125,6 @@ cd menuka/results/dereplicated_MAGS
 for f in *.fa; do 
     mv "$f" "${f%.fa}.fna"
 done
+
+## Alpha and beta diversity was computed in R
 ```
