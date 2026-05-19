@@ -2,24 +2,26 @@
 
 ```bash
 # Most of the Metagenomics analysis was done by IDI-GEMS. The steps in their analyses were:
-- Trimmomatic - Trim primers and bad quality sequences
-- Kraken - Assign reads , MetaPhlAn for high resolution taxonomic profiling
-- MEGAHIT- Assemble genome to contigs
-- Check quality of assembly - QUAST
-- Classification of Contigs - CAT, based on Prodigal, Diamond
-- Annotation of assembly - DRAM
-- Binning - Grouping assembled contigs into draft genomes, Metagenome assembled genome (MAGs) - complete or near complete genome
-- Matawrap- remove duplicated contigs
-- CheckM- completeness and contamination of bins
-- De-replication of bins (dRep 3.4.0) - Remove duplicate bins and select highest quality representative MAG for each unique genome
-- Taxonomy assignment - GTDBtk
-- CoverM - Mapping each sample read to MAG and produced coverage based abundance table
-- Resulting coverage was further normalized by sequencing depth per sample (total read count per sample)
-# Things to be done
-1. Alpha diversity
-2. Beta diversity
-3. AMR genes
-4. Virulence genes
+1. Trimmomatic - Trim primers and bad quality sequences
+2. Kraken - Assign reads , MetaPhlAn for high resolution taxonomic profiling
+3. MEGAHIT- Assemble genome to contigs
+4. Check quality of assembly - QUAST
+5. Classification of Contigs - CAT, based on Prodigal, Diamond
+6. Annotation of assembly - DRAM
+7. Binning - Grouping assembled contigs into draft genomes, Metagenome assembled genome (MAGs) - complete or near complete genome
+8. Matawrap- remove duplicated contigs
+9. CheckM- completeness and contamination of bins
+10. De-replication of bins (dRep 3.4.0) - Remove duplicate bins and select highest quality representative MAG for each unique genome
+11. Taxonomy assignment - GTDBtk
+12. CoverM - Mapping each sample read to MAG and produced coverage based abundance table
+13. Resulting coverage was further normalized by sequencing depth per sample (total read count per sample)
+
+# Additional things needed to be done
+1. AMR genes
+2. Virulence genes
+3. Alpha diversity
+4. Beta diversity
+ 
 ```
 
 ```bash
